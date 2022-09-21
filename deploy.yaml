@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: aseem-finalapp
+  name: aseem-finalapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aseem-finalapp
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: aseem-finalapp
+    spec:
+      containers:
+      - image: aseemp/aseemjenkinstestapp:4
+        name: aseemjenkinstestapp
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
